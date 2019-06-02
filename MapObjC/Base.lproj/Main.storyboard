@@ -17,18 +17,7 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dZ2-fj-ibv">
-                                <rect key="frame" x="20" y="44" width="374" height="818"/>
-                            </mapView>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="dZ2-fj-ibv" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="AM5-9p-RVd"/>
-                            <constraint firstItem="dZ2-fj-ibv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="hhM-Pl-eEg"/>
-                            <constraint firstItem="dZ2-fj-ibv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="syc-gz-1Wr"/>
-                            <constraint firstItem="dZ2-fj-ibv" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="x18-Iz-iTL"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
