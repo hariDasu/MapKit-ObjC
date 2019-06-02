@@ -35,8 +35,8 @@
     // Implement GMSTileURLConstructor
     // Returns a Tile based on the x,y,zoom coordinates, and the requested floor
     GMSTileURLConstructor urls = ^(NSUInteger x, NSUInteger y, NSUInteger z) {
-        NSString *url = [NSString stringWithFormat:@"http://c.tile.stamen.com/watercolor/%lu/%lu/%lu.png",
-                        (unsigned long)z, (unsigned long)x, (unsigned long)y];
+        NSString *url = [NSString stringWithFormat:@"/%lu/%lu/tile_%lu_%lu.png",
+                        (unsigned long)floor, (unsigned long)z, (unsigned long)x, (unsigned long)y];
         return [NSURL URLWithString:url];
     };
     

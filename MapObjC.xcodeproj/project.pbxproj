@@ -14,6 +14,7 @@
 		D508B86822A358EF00391B50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D508B86622A358EF00391B50 /* LaunchScreen.storyboard */; };
 		D508B86B22A358EF00391B50 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D508B86A22A358EF00391B50 /* main.m */; };
 		D508B87322A359F300391B50 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D508B87222A359F300391B50 /* MapKit.framework */; };
+		D5F55E6C22A42EF400F2E257 /* LocalTile.m in Sources */ = {isa = PBXBuildFile; fileRef = D5F55E6B22A42EF400F2E257 /* LocalTile.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,8 @@
 		D508B86922A358EF00391B50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D508B86A22A358EF00391B50 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D508B87222A359F300391B50 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		D5F55E6A22A42EF400F2E257 /* LocalTile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocalTile.h; sourceTree = "<group>"; };
+		D5F55E6B22A42EF400F2E257 /* LocalTile.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocalTile.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,8 @@
 				D508B86622A358EF00391B50 /* LaunchScreen.storyboard */,
 				D508B86922A358EF00391B50 /* Info.plist */,
 				D508B86A22A358EF00391B50 /* main.m */,
+				D5F55E6A22A42EF400F2E257 /* LocalTile.h */,
+				D5F55E6B22A42EF400F2E257 /* LocalTile.m */,
 			);
 			path = MapObjC;
 			sourceTree = "<group>";
@@ -222,6 +227,7 @@
 				D508B86022A358EF00391B50 /* ViewController.m in Sources */,
 				D508B86B22A358EF00391B50 /* main.m in Sources */,
 				D508B85D22A358EF00391B50 /* AppDelegate.m in Sources */,
+				D5F55E6C22A42EF400F2E257 /* LocalTile.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
