@@ -6,8 +6,9 @@
 //  Copyright © 2019 hariDasu. All rights reserved.
 //
 
-#import "ViewController.h"
 #import <GoogleMaps/GoogleMaps.h>
+#import "ViewController.h"
+#import "LocalTile.h"
 
 @interface ViewController ()
 
@@ -18,9 +19,9 @@
 - (void)loadView {
     // Create a GMSCameraPosition that tells the map to display the
     // coordinate -33.86,151.20 at zoom level 6.
-    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:-33.86
-                                                            longitude:151.20
-                                                                 zoom:6];
+    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:85
+                                                            longitude:180
+                                                                 zoom:0];
     GMSMapView *mapView = [GMSMapView mapWithFrame:CGRectZero camera:camera];
     mapView.myLocationEnabled = YES;
     self.view = mapView;
@@ -33,11 +34,14 @@
 //    NSInteger floor = 1;
     
     // Implement GMSTileURLConstructor
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSLog(@"%@", documentsDirectory);
     // Returns a Tile based on the x,y,zoom coordinates, and the requested floor
     GMSTileURLConstructor urls = ^(NSUInteger x, NSUInteger y, NSUInteger z) {
-        NSString *url = [NSString stringWithFormat:@"/%lu/%lu/tile_%lu_%lu.png",
-                        (unsigned long)floor, (unsigned long)z, (unsigned long)x, (unsigned long)y];
-        return [NSURL URLWithString:url];
+        NSString *pathToTiles = [NSString stringWithFormat:@"%@/2468/%lu/tile_%lu_%lu.png",
+                                 documentsDirectory, (unsigned long)z, (unsigned long)x, (unsigned long)y];
+        return [NSURL fileURLWithPath:pathToTiles];
     };
     
     // Create the GMSTileLayer
