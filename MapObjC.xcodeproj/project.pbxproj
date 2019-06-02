@@ -13,6 +13,7 @@
 		D508B86522A358EF00391B50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D508B86422A358EF00391B50 /* Assets.xcassets */; };
 		D508B86822A358EF00391B50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D508B86622A358EF00391B50 /* LaunchScreen.storyboard */; };
 		D508B86B22A358EF00391B50 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D508B86A22A358EF00391B50 /* main.m */; };
+		D508B87322A359F300391B50 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D508B87222A359F300391B50 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		D508B86722A358EF00391B50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D508B86922A358EF00391B50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D508B86A22A358EF00391B50 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D508B87222A359F300391B50 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D508B87322A359F300391B50 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +47,7 @@
 			children = (
 				D508B85A22A358EF00391B50 /* MapObjC */,
 				D508B85922A358EF00391B50 /* Products */,
+				D508B87122A359F300391B50 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,6 +73,14 @@
 				D508B86A22A358EF00391B50 /* main.m */,
 			);
 			path = MapObjC;
+			sourceTree = "<group>";
+		};
+		D508B87122A359F300391B50 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D508B87222A359F300391B50 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,6 +114,11 @@
 				TargetAttributes = {
 					D508B85722A358EF00391B50 = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -285,8 +302,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T7D952R639;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = VFN9EK8VGJ;
 				INFOPLIST_FILE = MapObjC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -294,6 +311,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.dasu.hari.MapObjC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = kingHenryWIld;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -302,8 +320,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T7D952R639;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = VFN9EK8VGJ;
 				INFOPLIST_FILE = MapObjC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -311,6 +329,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.dasu.hari.MapObjC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = kingHenryWIld;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
